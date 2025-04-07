@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string basePath     = "C:/dev/FileConverter/FileConverter/FileConverter/tempFolder/";
+            string wordPath     = $"{basePath}in.docx";
+            string outputPath   = $"{basePath}out.pdf";
+
+            WordToPdfConverter converter = new WordToPdfConverter();
+            converter.ConvertWordToPdf(wordPath, outputPath);
         }
     }
 }
